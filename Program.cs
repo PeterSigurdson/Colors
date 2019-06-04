@@ -8,15 +8,10 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
     class Program
-    {
-        static int ProgramCounter1 = 0;
-        Random rand1;
-        int GreenVariable, BlueVariable, OrangeVariable = 0;
-        static void Main(string[] args)
-        {
-            
-        }
+    { static void Main(string[] args) { new Colors().TestProgramA(); } }
 
+    class Colors
+    {
         public void TestProgramA()
         {
             for (   ; Green();  )
@@ -25,12 +20,16 @@ namespace ConsoleApp1
                 {
                     if (Orange())
                     {
-
+                        Console.WriteLine(ProgramRun++);
                     }
                 }
             }
         }
-
+        static int ProgramCounter1 = 0;
+        Random rand1;
+        int GreenVariable, BlueVariable, OrangeVariable, ProgramRun = 0;
+        
+        public Colors() { rand1 = new Random(); }
         bool Green()
         {   GreenVariable = rand1.Next(100);
             if (GreenVariable > 50)
@@ -39,6 +38,11 @@ namespace ConsoleApp1
             }
             return false;
         }
-       
+        bool Blue()  { return Green(); }
+        bool Orange()
+        {
+            if (GreenVariable > BlueVariable)  { return true; }
+            return false;
+        }
     }
 }
