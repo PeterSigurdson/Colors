@@ -102,6 +102,11 @@ namespace ConsoleApp1
 
         }
 
+        public void ArrayPlay2()
+        {
+
+        }
+
         }
    
 }
