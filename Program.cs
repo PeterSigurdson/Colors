@@ -46,7 +46,7 @@ namespace ConsoleApp1
             return Green(); }
 
         bool Orange()
-        {   Console.WriteLine("the GreenVariable is {0}, the BlueVariable is {1}, ", GreenVariable, BlueVariable);
+        {
             if (GreenVariable > BlueVariable)  { return true; }
             return false;
         }
