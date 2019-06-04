@@ -12,7 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             //new Colors().TestProgramA(); }
-            new Numbers2().Run();
+            new Numbers2().ArrayPlay2();
         }
  }
         class Colors
@@ -78,7 +78,7 @@ namespace ConsoleApp1
         class Numbers2
         {
         int a  = 2 , b = 3, c = 2;
-            public void Run()
+        public void Run()
             {
 
                 while (true)
@@ -91,7 +91,7 @@ namespace ConsoleApp1
 
             }
 
-            public void ArrayPlay(int []a, int b)
+        public void ArrayPlay(int []a, int b)
         {
             int GeorgeTheLion = 0;
             a = new int[b];
@@ -104,7 +104,9 @@ namespace ConsoleApp1
 
         public void ArrayPlay2()
         {
-
+            int[] x = new int[4];
+            int y = 5;
+            this.ArrayPlay(x, y);
         }
 
         }
