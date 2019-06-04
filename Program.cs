@@ -22,23 +22,26 @@ namespace ConsoleApp1
                     {
                         Console.WriteLine(ProgramRun++);
                     }
+                    else { Console.WriteLine(ProgramRun);}
                 }
             }
         }
         static int ProgramCounter1 = 0;
         Random rand1;
-        int GreenVariable, BlueVariable, OrangeVariable, ProgramRun = 0;
+        int GreenVariable, BlueVariable, ProgramRun = 0;
         
         public Colors() { rand1 = new Random(); }
         bool Green()
         {   GreenVariable = rand1.Next(100);
-            if (GreenVariable > 50)
-            {
-                return true;
-            }
+            Console.WriteLine("the GreenVariable is {0} ", GreenVariable);
+            if (GreenVariable > 50)  { return true; }
             return false;
         }
-        bool Blue()  { return Green(); }
+        bool Blue()  {
+            BlueVariable += 2;
+            Console.WriteLine("the GreenVariable is {0} ", GreenVariable);
+            return Green(); }
+
         bool Orange()
         {
             if (GreenVariable > BlueVariable)  { return true; }
