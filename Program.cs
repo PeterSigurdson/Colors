@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 namespace ConsoleApp1
 {
     class Program
-    { static void Main(string[] args) { new Colors().TestProgramA(); } }
+    { static void Main(string[] args) {
+            //new Colors().TestProgramA(); }
+            new Numbers().Run();
+    }
 
     class Colors
     {
@@ -48,4 +51,16 @@ namespace ConsoleApp1
             return false;
         }
     }
+
+        //// class Numbers
+        //{
+        //    int a = 0;
+        //    public void Run()
+        //    {
+        //        for (int i = 0; i < 10; i++)
+        //        {
+        //            a++;
+        //        }
+        //    }
+        //}
 }
