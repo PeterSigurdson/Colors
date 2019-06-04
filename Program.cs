@@ -9,50 +9,36 @@ namespace ConsoleApp1
 {
     class Program
     {
+        static int ProgramCounter1 = 0;
+        Random rand1;
+        int GreenVariable, BlueVariable, OrangeVariable = 0;
         static void Main(string[] args)
         {
-            // Get the number's factors.
-           
-            long num = 342345;
-            List<long> factors = FindFactors(num);
-
-            // Display the factors.
-            List<string> strings = factors.ConvertAll(x => x.ToString());
-            txtFactors.Text = string.Join(" x ", strings.ToArray());
+            
         }
 
-        private static List<long> FindFactors(long num)
+        public void TestProgramA()
         {
-            List<long> result = new List<long>();
-
-            // Take out the 2s.
-            while (num % 2 == 0)
+            for (   ; Green();  )
             {
-                result.Add(2);
-                num /= 2;
-            }
+                while (Blue())
+                {
+                    if (Orange())
+                    {
 
-            // Take out other primes.
-            long factor = 3;
-            while (factor * factor <= num)
-            {
-                if (num % factor == 0)
-                {
-                    // This is a factor.
-                    result.Add(factor);
-                    num /= factor;
-                }
-                else
-                {
-                    // Go to the next odd number.
-                    factor += 2;
+                    }
                 }
             }
-
-            // If num is not 1, then whatever is left is prime.
-            if (num > 1) result.Add(num);
-
-            return result;
         }
+
+        bool Green()
+        {   GreenVariable = rand1.Next(100);
+            if (GreenVariable > 50)
+            {
+                return true;
+            }
+            return false;
+        }
+       
     }
 }
